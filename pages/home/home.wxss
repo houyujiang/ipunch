@@ -1,0 +1,117 @@
+.main-container {
+  width: 750rpx;
+  min-height: 100%;
+  overflow-x: hidden;
+  /* background:#f4f4f4; */
+}
+
+/* 还没东西时的介绍 */
+.desc-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 80%;
+  height: 200rpx;
+  margin-left: 27rpx;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+  color: rgb(43, 38, 38);
+  background: rgba(168, 216, 168, 0.822);
+  padding: 50rpx;
+}
+.desc-wrap .text {
+  line-height: 2;
+  font-size: 14px;
+  color: #333;
+}
+.desc-wrap .big-text {
+  line-height: 3;
+  font-size: 18px;
+  font-weight: bold;
+}
+.desc-wrap .punch-title{
+  line-height: 2;
+  font-size: 14px;
+  color: rgb(43, 42, 42);
+}
+.desc-wrap .punch-content{
+  line-height: 2;
+  font-size: 14px;
+  color:  rgb(43, 42, 42);
+}
+.desc-wrap .punch-time{
+  line-height: 2;
+  font-size: 12px;
+  color:  rgb(110, 103, 103);
+}
+.punch-icon{
+  flex-direction:row;
+}
+
+.punch-icon image{
+  width: 80rpx;
+  height: 80rpx;
+}
+/*右下角 添加项目 悬浮按钮*/
+.add-btn {
+  position: fixed;
+  right: 60rpx;
+  bottom: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: rgba(9, 187, 7, 0.2); */
+}
+ 
+.add-btn image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.punch-item {
+  position: relative;
+  width: 100%;
+  height: 270rpx;
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  color: rgb(161, 145, 145);
+  background: rgb(233, 227, 227);
+  overflow: hidden;
+}
+
+.punch-item .wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.punch-item .name {
+  display: block;
+  padding: 40rpx 10rpx 10rpx;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 4rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.punch-item .btn {
+  margin: 10rpx auto;
+}
+
+.punch-item .time {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+.text-content{}

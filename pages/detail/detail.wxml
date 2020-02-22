@@ -1,0 +1,15 @@
+<!--pages/detail/detail.wxml-->
+<view class="main-container">
+<calendar
+  calendarConfig="{{calendarConfig}}"
+  bind:onTapDay="onTapDay"
+  bind:afterTapDay="afterTapDay"
+  bind:onSwipe="onSwipe"
+  bind:whenChangeWeek="whenChangeWeek"
+  bind:whenChangeMonth="whenChangeMonth"
+  bind:afterCalendarRender="afterCalendarRender"
+></calendar>
+<view class='b cc wrap btn-wrap'>
+   <button class='b cc btn btn-red'>共坚持打卡{{holdDay}}天</button>
+</view>
+</view>

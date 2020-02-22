@@ -1,0 +1,58 @@
+/* pages/create/create.wxss */
+.main-container {
+  width: 750rpx;
+  min-height: 100%;
+  overflow-x: hidden;
+  /* background:#f4f4f4; */
+}
+
+.input-container{
+  position: relative;
+  width: 80%;
+  height:80%;
+  margin-left: 27rpx;
+  margin-top: 130rpx;
+  border-radius: 10rpx;
+  color: rgb(43, 38, 38);
+  background: rgba(168, 216, 168, 0.822);
+   border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  padding: 50rpx;
+}
+
+.title{
+  padding-left: 180rpx;
+  padding-bottom: 20rpx;
+}
+
+.input-box  {
+  width: 100%;
+  margin-top: 40rpx;
+  margin-right: 35rpx;
+  margin-bottom: 40rpx;
+  border-radius: 10rpx;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+.name{
+  height: 100rpx;
+  border-radius: 20rpx;
+  padding-left: 14rpx;
+  line-height: 60rpx;
+}
+.content {
+  height: 180rpx;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  line-height: 60rpx;
+}
+.textarea{
+  width: 100%;
+  height: 100%;
+
+}
+.button{
+  margin-top: 100rpx;
+}

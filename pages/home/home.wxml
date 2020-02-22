@@ -1,0 +1,24 @@
+<view class="main-container">
+  <!--初始化未创建打卡活动-->
+  <!-- 新用户Tips -->
+  <view wx:if='{{showFlag}}' class='desc-wrap'>
+    <view class='text big-text'>您还没有打卡计划:</view>
+    <view class='text'>点击右下角按钮添加一个打卡计划吧~</view>
+  </view>
+  <!--已创建打卡活动后的列表-->
+ 
+  <view class="desc-wrap" wx:for="{{projectList}}"wx:key="key" wx:for-item="item" bindtap="detail" data-projectId="{{item.projectId}}" >
+    <view class='punch-title'>主题:{{item.title}}</view>
+    <view class='punch-content'>简介:{{item.content}}</view>
+    <view class='punch-time'>创建日期{{item.createTime}}</view>
+    <view class='punch-icon' bindtap="signIn" data-projectId='{{item.projectId}}'>
+      <image wx:if='{{!item.punchFlag}}' src="/dist/images/sword_off.png"></image>
+      <image wx:if='{{item.punchFlag}}' src="/dist/images/sword_on.png"></image>
+    </view>
+  </view>
+ 
+  <!--添加创建新活动-->
+  <view class="add-btn" bindtap="add">
+    <image src="/dist/images/plus.png"></image>
+  </view>
+</view>

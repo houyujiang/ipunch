@@ -1,0 +1,18 @@
+<!--pages/create/create.wxml-->
+
+<view class="mian-container">
+  <view class="input-container">
+    <view class="title" >创建打卡计划</view>
+    <view class="input-box name">
+       <input class="textarea" type="text" bindblur="titleChange" placeholder="打卡名称"/>
+    </view>
+    <view class="input-box content">
+       <textarea class="textarea" bindinput="contentChange" placeholder="快来立一个flag"/>
+    </view> 
+   
+  </view>
+  <view class="button">
+     <button type="primary" size="default" bindtap="createActivity">提交</button>
+  </view>
+  
+</view>

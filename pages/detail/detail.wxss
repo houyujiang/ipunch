@@ -1,0 +1,39 @@
+/* pages/detail/detail.wxss */
+.main-container {
+  width: 750rpx;
+  min-height: 100%;
+  overflow-x: hidden;
+  /* background:#f4f4f4; */
+}
+
+.b {
+    display: flex;
+}
+.cc {
+    align-items: center;
+    justify-content: center;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.btn {
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    font-size: 28rpx;
+    height: 60rpx;
+    line-height: 1;
+    background: transparent;
+    margin-bottom: 20rpx;
+}
+
+.btn-red {
+    color: #e54d42;
+}
+.btn-red::after {
+    border-color: #e54d42;
+    border-radius: 60rpx;
+}
+.btn-wrap {
+    width: 90%;
+    margin: 0 auto;
+}
