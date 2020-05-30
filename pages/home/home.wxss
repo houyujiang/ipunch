@@ -2,9 +2,54 @@
   width: 750rpx;
   min-height: 100%;
   overflow-x: hidden;
-  /* background:#f4f4f4; */
+}
+/* 目标列表 --开始 */
+.project-container {
+  margin: 0 40rpx;
+  margin-top: 10rpx;
+  margin-bottom: 200rpx;
 }
 
+.project-container > .count {
+  color: #555;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.project-container > .count > .num {
+  display: inline-block;
+  margin: 0 4rpx;
+  color: #1976d2;
+  font-weight: bolder;
+  font-size: 32rpx;
+}
+
+.project {
+  margin: 24rpx 0;
+  padding: 24rpx;
+  border-radius: 18rpx;
+  background-color: #fff;
+  box-shadow: 0 6rpx 24rpx rgba(1, 74, 146, 0.493);
+}
+
+.project > .title {
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.project > .tags {
+  display: flex;
+  margin-top: 6rpx;
+}
+
+.project > .tags > m-tag {
+  margin-left: 16rpx;
+}
+
+.project > .tags > m-tag:first-child {
+  margin-left: 0;
+}
+/* 目标列表----结束 */
 /* 还没东西时的介绍 */
 .desc-wrap {
   display: flex;
@@ -17,9 +62,20 @@
   margin-top: 30rpx;
   border-radius: 20rpx;
   color: rgb(43, 38, 38);
-  background: rgba(168, 216, 168, 0.822);
+  background: rgba(238, 195, 77, 0.877);
   padding: 50rpx;
 }
+.none-list-show {
+  margin-top: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.empty-img {
+  width: 100%;
+}
+/* 还没东西时的介-end */
 .desc-wrap .text {
   line-height: 2;
   font-size: 14px;
@@ -54,19 +110,33 @@
   height: 80rpx;
 }
 /*右下角 添加项目 悬浮按钮*/
+/* 创建按钮 */
 .add-btn {
   position: fixed;
-  right: 60rpx;
-  bottom: 60rpx;
-  width: 100rpx;
-  height: 100rpx;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  margin: 32px;
+  padding: 24rpx;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background: rgba(9, 187, 7, 0.2); */
+  background-color: #6f38c9;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3rpx 20rpx;
+  animation: add-ani 2s infinite ease-in-out;
 }
- 
+/* 创建按钮  颜色动画*/
+@keyframes add-ani {
+  0% {
+    background-color: #8152da;
+  }
+  70% {
+    background-color: #833dc4;
+  }
+  100% {
+    background-color: #7e0ac2;
+  }
+}
 .add-btn image {
   width: 80rpx;
   height: 80rpx;

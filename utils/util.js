@@ -81,11 +81,60 @@ function signIn(id) {
     })
   }
 }
+// 以下 2012-02-25 添加
+// 显示失败提示
+function showModal(title, content,doStringify = false){
+  wx.hideToast()
+  wx.showModal({
+    title,
+    content: doStringify ? JSON.stringify(content) : content,
+    showCancel: false
+  })
 
+}
+function getBookList(){
+  var arr = wx.getStorageSync('book');
+  var projectList = [];
+  //遍历缓存数据并组装
+  if (arr.length > 0) {
+    var showFlag = false;
+    arr.forEach((item, i) => {
+      var listdata = {
+        journal_book_id: item.journal_book_id,
+        name: item.name,
+        background_id: item.background_id,
+        createTime: item.createTime,
+      };
+      projectList.push(listdata)
+    })
+  } else {
+    showFlag = true;
+  }
+  console.log("home init", projectList)
+  // 数据存入页面
+  return projectList
+}
+
+// 显示成功提示
+var showSuccess = title => {
+  wx.hideToast()
+  wx.showToast({
+    title,
+    icon: 'success'
+  })
+}
+
+var getJournalList= bookid=>{
+  return 'ok'
+}
 module.exports = {
   formatTime: formatTime,
   wxuuid: wxuuid,
   formatDay: formatDay,
   signIn: signIn,
-  isPunched: isPunched
+  isPunched: isPunched,
+  showModal: showModal,
+  showSuccess: showSuccess,
+  getBookList: getBookList,
+  getJournalList: getJournalList
 }

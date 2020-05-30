@@ -1,37 +1,14 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/me/me",
-    "pages/create/create",
     "pages/detail/detail"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#47a86c",
+    "backgroundColor": "#F6F6F6",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "私房打卡",
-    "backgroundColor": "#fff",
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true
-  },
-  "tabBar": {
-    "color": "#686868",
-    "selectedColor": "#47a86c",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "iconPath": "dist/images/top_icon.png",
-        "selectedIconPath": "dist/images/top_active_icon.png",
-        "text": "打卡"
-      },
-      {
-        "pagePath": "pages/me/me",
-        "iconPath": "dist/images/my_icon.png",
-        "selectedIconPath": "dist/images/my_active_icon.png",
-        "text": "我的"
-      }
-    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

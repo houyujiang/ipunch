@@ -1,15 +1,42 @@
 <!--pages/detail/detail.wxml-->
 <view class="main-container">
-<calendar
-  calendarConfig="{{calendarConfig}}"
-  bind:onTapDay="onTapDay"
-  bind:afterTapDay="afterTapDay"
-  bind:onSwipe="onSwipe"
-  bind:whenChangeWeek="whenChangeWeek"
-  bind:whenChangeMonth="whenChangeMonth"
-  bind:afterCalendarRender="afterCalendarRender"
-></calendar>
-<view class='b cc wrap btn-wrap'>
-   <button class='b cc btn btn-red'>共坚持打卡{{holdDay}}天</button>
-</view>
+	<view class="header">
+		<view class="goal-title">{{title}}</view>
+		<image mode="aspectFit" bind:tap="onEditGoalTitle" class="edit-goal-title" src="/dist/images/detail/edit.png"></image>
+		<image mode="aspectFit" bind:tap="onRemoveGoal" class="remove-goal" src="/dist/images/detail/remove.png"></image>
+	</view>
+	<view class="subtitle">统计概览</view>
+	<view class="statistics-container">
+		<view class="time statistics-item">
+			<image src="/dist/images/detail/time.png" />
+			<view class="title">累计时间</view>
+			<view class="desc">{{holdDay?holdDay:'无记录'}}</view>
+		</view>
+		<view class="longest-record statistics-item">
+			<image src="/dist/images/detail/longest-record.png" />
+			<view class="title">最长时间</view>
+			<view class="desc">{{longestDuration?longestDuration:'无记录'}}</view>
+		</view>
+		<view class="recent-date statistics-item">
+			<image src="/dist/images/detail/recent.png" />
+			<view class="title">最近记录</view>
+			<view class="desc">{{lastUpdate ? lastUpdate : '无记录'}}</view>
+		</view>
+	</view>
+	<view class="subtitle">打卡日历</view>
+	<view class="calendar-container">
+		<calendar calendarConfig="{{calendarConfig}}" bind:onTapDay="onTapDay" bind:afterTapDay="afterTapDay" bind:onSwipe="onSwipe" bind:whenChangeWeek="whenChangeWeek" bind:whenChangeMonth="whenChangeMonth" bind:afterCalendarRender="afterCalendarRender"></calendar>
+	</view>
+	<!-- 行为按钮 -->
+  <view class="sign-record" bind:tap="signIn">
+    <image src="../../images/detail/timer.png" />
+    <view class="desc">{{signflag?'已打卡':'未打卡'}}</view>
+  </view>
+	 <view class="share-record" bind:tap="saveImage">
+    <image src="../../images/detail/timer.png" />
+    <view class="desc">生成海报</view>
+  </view>
+	<!--零时添加分享朋友圈按钮-->
+	<painter customStyle='position: absolute; left: -9999rpx;' palette="{{template}}" bind:imgOK="onImgOK" widthPixels="1000" />
+	<!-- <button style='position:relative;margin-top:50rpx' bind:tap='saveImage'>分享到朋友圈</button> -->
 </view>

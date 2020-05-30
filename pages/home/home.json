@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "私房打卡",
   "usingComponents": {
-   
-  }
+      "m-tag": "../../components/tag/index",
+      "m-tips": "../../components/tips/index",
+      "m-modal": "../../components/modal/index"
+    }
 }
