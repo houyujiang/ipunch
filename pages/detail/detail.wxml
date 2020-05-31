@@ -2,7 +2,7 @@
 <view class="main-container">
 	<view class="header">
 		<view class="goal-title">{{title}}</view>
-		<image mode="aspectFit" bind:tap="onEditGoalTitle" class="edit-goal-title" src="/dist/images/detail/edit.png"></image>
+		<!-- <image mode="aspectFit" bind:tap="onEditGoalTitle" class="edit-goal-title" src="/dist/images/detail/edit.png"></image> -->
 		<image mode="aspectFit" bind:tap="onRemoveGoal" class="remove-goal" src="/dist/images/detail/remove.png"></image>
 	</view>
 	<view class="subtitle">统计概览</view>
@@ -29,11 +29,11 @@
 	</view>
 	<!-- 行为按钮 -->
   <view class="sign-record" bind:tap="signIn">
-    <image src="../../images/detail/timer.png" />
+    <image src="/dist/images/detail/sign.png" />
     <view class="desc">{{signflag?'已打卡':'未打卡'}}</view>
   </view>
 	 <view class="share-record" bind:tap="saveImage">
-    <image src="../../images/detail/timer.png" />
+    <image src="/dist/images/detail/outpic.png" />
     <view class="desc">生成海报</view>
   </view>
 	<!--零时添加分享朋友圈按钮-->

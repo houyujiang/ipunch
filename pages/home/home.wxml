@@ -16,7 +16,6 @@
 			<view class="project" wx:for="{{projectList}}" wx:key="id" bind:tap="detail" data-project-id="{{item.projectId}}" data-title="{{item.title}}">
 				<view class="title">{{item.title}}</view>
 				<view class="tags">
-					<m-tag>累计打卡: {{item.duration}}</m-tag>
 					<m-tag wx:if="{{item.createTime}}">创建时间：{{item.createTime}}</m-tag>
 				</view>
 			</view>

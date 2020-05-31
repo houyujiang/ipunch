@@ -110,17 +110,18 @@ Page({
     this.setData({
       image: this.imagePath
     })
-    console.log(e);
-  },
-  saveImage() {
-    var json = this.imgFactory();
-    console.log(json);
-    this.setData({
-      template: json
-    })
+    console.log('imageOK:',e);
     wx.saveImageToPhotosAlbum({
       filePath: this.imagePath,
     });
+  },
+  saveImage() {
+    var json = this.imgFactory();
+    console.log('saveImage',json);
+    this.setData({
+      template: json
+    })
+    
   },
   //返回生成的海报
   imgFactory() {
@@ -167,10 +168,10 @@ Page({
         },
         {
           type: 'text',
-          text: `「打卡主题:${title}」`,
+          text: `「主题:${title}」`,
           css: {
-            top: '80rpx',
-            left: '375rpx',
+            top: '100rpx',
+            left: '350rpx',
             align: 'center',
             fontSize: '38rpx',
             color: '#ffffff',
@@ -180,9 +181,9 @@ Page({
         },
         {
           type: 'text',
-          text: `连续打卡：★${holdDay} ${holdDay > 0 ? '🔥' : ''}`,
+          text: `累计打卡:${holdDay} ${holdDay > 0 ? '🔥' : ''}天`,
           css: {
-            top: '150rpx',
+            top: '200rpx',
             left: '80rpx',
             width: '550rpx',
             maxLines: '1',
@@ -192,9 +193,9 @@ Page({
         },
         {
           type: 'text',
-          text: `作者：symbian米汤`,
+          text: `连续打卡:${holdDay} ${holdDay > 0 ? '🔥' : ''}天`,
           css: {
-            top: '250rpx',
+            top: '300rpx',
             left: '80rpx',
             width: '550rpx',
             maxLines: '1',
@@ -204,9 +205,9 @@ Page({
         },
         {
           type: 'text',
-          text: `GitHub：https://github.com/houyujiang/ipunch`,
+          text: `全部秘决只有两句话：不屈不挠，坚持到底。——陀思妥耶夫斯基`,
           css: {
-            top: '350rpx',
+            top: '400rpx',
             left: '80rpx',
             width: '550rpx',
             fontSize: '28rpx',
@@ -219,7 +220,7 @@ Page({
           type: 'text',
           text: `项目描述：简单至极的打卡应用`,
           css: {
-            top: '450rpx',
+            top: '550rpx',
             left: '80rpx',
             width: '550rpx',
             fontSize: '28rpx',
